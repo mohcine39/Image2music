@@ -1,38 +1,29 @@
-# Image2music
-🎵 Image2Music: A Music Recommendation System Based on Image Analysis
-Technologies Used: Python, Azure Cognitive Services, Hugging Face Transformers, Flask
+# Music-recommendation-app-based-on-image
+Music Suggestion System
 
-📖 Project Overview
-Image2Music is an innovative application that combines image analysis and artificial intelligence to provide personalized music recommendations. This project leverages image processing, emotional understanding, and playlist generation to create a unique experience for users.
+# Introduction
+The Music Suggestion System is a project aimed at recommending music based on the content of an image uploaded by the user. The system uses Azure's Cognitive Services API to generate a description of the image and then passes it through a transformer-based model to get an embedding vector. This vector is then compared to a set of pre-defined emotion vectors to find the most suitable emotions for the image. Finally, a dataset of music associated with the identified emotions is used to suggest songs to the user.
 
-🚀 Key Features
-Image Analysis with Azure Cognitive Services
+# Requirements
+Python 3.7 or higher
+Hugging Face transformers library
+Flask web framework
+Azure Cognitive Services API credentials
 
-Extracts visual and contextual features from uploaded images.
-Detects emotional elements using Azure's Cognitive Services API.
-Transformer-Based Model
+# Installation
+Clone the repository to your local machine.
+Install the required packages using the following command: pip install -r requirements.txt.
+Add your Azure Cognitive Services API credentials in the config.py file.
+Modify the path of the dataset here ---> file data1 = pd.read_csv("D:/Downloads (D)/dataset1.csv").
 
-Utilizes a Hugging Face Transformer model to encode image descriptions into vector representations.
-Computes similarity between these representations and predefined emotions to determine the image's mood.
-User-Friendly Interface with Flask
+# Usage : 
+Run the Flask application by executing the following command in your terminal: python app.py
+Open your web browser and go to http://localhost:5000/.
+Upload an image and click on the "Submit" button to get a list of recommended songs.
 
-A simple, intuitive platform for users to upload images.
-Displays results as a curated list of songs matching the image’s mood.
-🛠️ Architecture
-Backend
+# Future Improvements
+Integrating the Music Suggestion System into social media platforms like Instagram to suggest music for stories.
+Developing a mobile application for easy access to the system on the go.
 
-Image analysis powered by Azure Cognitive Services and Hugging Face.
-Similarity computations and playlist generation.
-Frontend
-
-An interactive and user-friendly web interface built with Flask.
-Cloud Computing
-
-Integrated with Azure for image analysis and infrastructure.
-🎯 Objective
-Deliver a unique experience where a single image can inspire a custom playlist, connecting visual and emotional aspects seamlessly.
-
-📷 How It Works
-Upload an image through the web interface.
-The algorithm analyzes the emotions and generates a playlist accordingly.
-Receive song suggestions tailored to the image’s mood.
+# Conclusion
+The Music Suggestion System is a unique project that combines image recognition and music recommendation to provide a seamless and personalized experience for users. With the power of machine learning and cloud computing, the system is able to generate accurate recommendations based on the content of an image. This project has a lot of potential for further development, and we hope that it inspires more innovative ideas in the intersection of technology and art.
